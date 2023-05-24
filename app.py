@@ -13,7 +13,6 @@ def predict_emotion():
     input_text = request.json.get("text")  
     
     if not input_text:
-        # Response to send if the input_text is undefined
         response = {
                     "status": "error",
                     "message": "Please enter some text to predict emotion!"
@@ -21,8 +20,7 @@ def predict_emotion():
         return jsonify(response)
     else:  
         predicted_emotion,predicted_emotion_img_url = predict(input_text)
-        
-        # Response to send if the input_text is not undefined
+
         response = {
                     "status": "success",
                     "data": {
