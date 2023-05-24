@@ -1,15 +1,11 @@
-var date = new Date()
-let display_date= "Date:" + date.toLocaleDateString()
-
-//Load HTML DOM
+var date = new Date().toLocaleDateString()
+let display_date= "Date: " + date
 $(document).ready(function () {
     $("#display_date").html(display_date)
 })
 
-let predicted_emotion;
-//HTML-->JavaScript--->Flask
-//Flask--->JavaScript--->HTML
 
+let predicted_emotion;
 $(function () {
     $("#predict_button").click(function () {
 
@@ -45,8 +41,3 @@ $(function () {
     });
 })
 
-// const weekDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-// const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-
-
-// display_date = `${weekDay[date.getDay() - 1]}, ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
